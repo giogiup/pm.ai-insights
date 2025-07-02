@@ -1,10 +1,10 @@
 [
   {
-    "source": "OpenAI Blog",
-    "url": "https://openai.com/blog/rss"
+    "source": "OpenAI News",
+    "url": "https://openai.com/news/rss.xml"
   },
   {
-    "source": "Hugging Face",
-    "url": "https://huggingface.co/blog/rss"
+    "source": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml"
   }
 ]

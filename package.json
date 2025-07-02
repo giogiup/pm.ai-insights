@@ -1,0 +1,12 @@
+{
+  "name": "pm-ai-insights",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch": "node fetchFeeds.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "rss-parser": "^3.12.0"
+  }
+}
