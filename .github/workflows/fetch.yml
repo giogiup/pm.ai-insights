@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Debug: print first lines of fetchFeeds.js
+      - name: Debug: print fetchFeeds.js header
         run: |
           echo ">>>> fetchFeeds.js <<<<"
           sed -n '1,20p' fetchFeeds.js
