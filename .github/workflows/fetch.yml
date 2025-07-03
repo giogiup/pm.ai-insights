@@ -1,3 +1,4 @@
+# .github/workflows/fetch.yml
 name: "Scheduled Feed Fetch"
 
 on:
@@ -13,27 +14,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Checkout repo"
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: "Debug: show workflow file"
-        run: cat .github/workflows/fetch.yml
+      - name: Debug: print package.json
+        run: |
+          echo ">>>> package.json <<<<"
+          cat package.json
 
-      - name: "Debug: list workspace files"
+      - name: Debug: list workspace files
         run: ls -la
 
-      - name: "Setup Node.js"
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: "Install dependencies"
+      - name: Install dependencies
         run: npm install
 
-      - name: "Run fetch script"
-        run: npm run fetch
+      - name: Debug: print first lines of fetchFeeds.js
+        run: |
+          echo ">>>> fetchFeeds.js <<<<"
+          sed -n '1,20p' fetchFeeds.js
 
-      - name: "Commit and push if changed"
+      - name: Run fetch script directly
+        run: node fetchFeeds.js
+
+      - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
