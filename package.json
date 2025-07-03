@@ -2,6 +2,7 @@
   "name": "pm.ai-insights",
   "version": "0.1.0",
   "private": true,
+  "type": "module",          // ← add this line
   "scripts": {
     "dev": "next dev",
     "build": "next build",
