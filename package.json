@@ -2,13 +2,12 @@
   "name": "pm.ai-insights",
   "version": "0.1.0",
   "private": true,
-+ "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fetch": "node fetchFeeds.js"
+    "fetch": "node --experimental-modules fetchFeeds.mjs"
   },
   "dependencies": {
     "framer-motion": "^10.12.16",
